@@ -7,6 +7,7 @@
 import 'package:auto_route/auto_route.dart' as _i1;
 import 'package:flutter/material.dart' as _i2;
 import 'package:funvas_app/ui/views/home/home_view.dart' as _i4;
+import 'package:funvas_app/ui/views/one/one_view.dart' as _i5;
 import 'package:funvas_app/ui/views/startup/startup_view.dart' as _i3;
 
 class FunvasAppRouter extends _i1.RootStackRouter {
@@ -24,13 +25,19 @@ class FunvasAppRouter extends _i1.RootStackRouter {
         routeData: routeData,
         builder: (_) {
           return _i4.HomeView();
+        }),
+    OneRoute.name: (routeData) => _i1.AdaptivePage<dynamic>(
+        routeData: routeData,
+        builder: (_) {
+          return _i5.OneView();
         })
   };
 
   @override
   List<_i1.RouteConfig> get routes => [
         _i1.RouteConfig(StartupRoute.name, path: '/'),
-        _i1.RouteConfig(HomeRoute.name, path: '/home-view')
+        _i1.RouteConfig(HomeRoute.name, path: '/home-view'),
+        _i1.RouteConfig(OneRoute.name, path: '/one-view')
       ];
 }
 
@@ -44,4 +51,10 @@ class HomeRoute extends _i1.PageRouteInfo {
   const HomeRoute() : super(name, path: '/home-view');
 
   static const String name = 'HomeRoute';
+}
+
+class OneRoute extends _i1.PageRouteInfo {
+  const OneRoute() : super(name, path: '/one-view');
+
+  static const String name = 'OneRoute';
 }

@@ -18,8 +18,18 @@ class HomeView extends StatelessWidget {
       ) {
         return Scaffold(
           body: Center(
-            child: Text(
-              'HomeView',
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () async {
+                    await model.navigateToOneView();
+                  },
+                  child: Text(
+                    "Funvas One",
+                  ),
+                ),
+              ],
             ),
           ),
         );

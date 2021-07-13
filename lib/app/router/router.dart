@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 
 import 'package:funvas_app/ui/views/home/home_view.dart';
+import 'package:funvas_app/ui/views/one/one_view.dart';
 import 'package:funvas_app/ui/views/startup/startup_view.dart';
 
 export './router.gr.dart';
@@ -10,6 +11,7 @@ export './router.gr.dart';
   routes: <AutoRoute>[
     AdaptiveRoute(page: StartupView, initial: true),
     AdaptiveRoute(page: HomeView),
+    AdaptiveRoute(page: OneView),
   ],
 )
 class $FunvasAppRouter {}
