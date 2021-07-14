@@ -11,4 +11,10 @@ class HomeViewModel extends CustomBaseViewModel {
       OneRoute(),
     );
   }
+
+  Future<void> navigateToTwoView() async {
+    await _routerService.router.push(
+      TwoRoute(),
+    );
+  }
 }

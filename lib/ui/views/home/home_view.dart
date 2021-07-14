@@ -29,6 +29,14 @@ class HomeView extends StatelessWidget {
                     "Funvas One",
                   ),
                 ),
+                ElevatedButton(
+                  onPressed: () async {
+                    await model.navigateToTwoView();
+                  },
+                  child: Text(
+                    "Funvas Two",
+                  ),
+                ),
               ],
             ),
           ),
